@@ -16,7 +16,7 @@ import React from "react";
 function SingleTweet({ writer, content, date }) {
   return (
     <div>
-      <ul>
+      <ul className="tweetBox">
         <li>{writer}</li>
         <li>{date}</li>
         <li>{content}</li>

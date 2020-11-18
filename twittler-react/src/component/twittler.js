@@ -5,6 +5,7 @@ class Twittler extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      newInput: "",
       tweets: [
         {
           uuid: 1,
@@ -20,16 +21,38 @@ class Twittler extends React.Component {
         },
       ],
     };
+    // this.handleChange.bind(this);
+    // this.clickHandler.bind(this);
   }
+
+  handleChange = (e) => {
+    this.setState({ newInput: e.target.value });
+    console.log(this.state.newInput);
+  };
+
+  clickHandler = () => {
+    // console.log(this.state.newInput);
+    let msg = {
+      uuid: this.state.tweets.length + 1,
+      writer: "DH",
+      date: new Date().toLocaleDateString(),
+      content: this.state.newInput,
+    };
+
+    this.setState((state) => ({
+      tweets: state.tweets.concat(msg),
+    }));
+    alert("새로운 트윗을 보냈습니다.");
+  };
 
   render() {
     return (
       <div>
-        <div>작성자 : </div>
         <div className="inputBox">
+          <div>작성자 : </div>
           <div>
-            <textarea></textarea>
-            <button>새 글 쓰기</button>
+            <textarea onChange={this.handleChange}></textarea>
+            <button onClick={this.clickHandler}>새 글 쓰기</button>
           </div>
         </div>
 

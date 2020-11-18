@@ -1,3 +1,6 @@
+body {
+  background: rgb(90, 187, 243);
+}
 .App {
   text-align: center;
 }
@@ -37,7 +40,24 @@
   }
 }
 
-/* <div id="writingArea">
-          <textarea id="inputBox"></textarea>
-          <button id="sendNewTweet">새 글 쓰기</button>
-        </div> */
+.tweetBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  list-style: none;
+  background: white;
+}
+.tweetsBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: whitesmoke;
+  width: 500px;
+  height: 300px;
+}
+.inputBox {
+  display: flex;
+  justify-content: center;
+}
