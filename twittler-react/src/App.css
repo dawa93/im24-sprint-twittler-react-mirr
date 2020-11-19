@@ -40,24 +40,65 @@ body {
   }
 }
 
+.inputBox {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* align-items: center; */
+  margin: 24px;
+  background: whitesmoke;
+  border-radius: 8px;
+}
+.wirterInfo {
+  padding: 8px 0px;
+}
+.contentBox {
+  padding: 8px 0px;
+}
+
 .tweetBox {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  list-style: none;
-  background: white;
 }
 .tweetsBox {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
 
+  border-radius: 8px;
+  margin: 32px;
   background: whitesmoke;
-  width: 500px;
-  height: 300px;
+  height: 100%;
 }
-.inputBox {
+.tweet {
+  width: 300px;
+  list-style: none;
+  background: white;
+  border-radius: 8px;
+}
+.sendBtn {
+  width: 100px;
+  height: 32px;
+}
+.writer {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 4px;
+}
+.date {
+  font-size: 12px;
+  padding: 4px;
+}
+.content {
+  padding: 4px;
+  font-size: 16px;
+}
+
+#logo {
+  margin: 0px;
   display: flex;
-  justify-content: center;
+  text-align: center;
+  /* position: relative;
+  left: 300px; */
 }
